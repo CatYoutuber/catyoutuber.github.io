@@ -10,8 +10,12 @@
             window.location = ("catyoutuber.github.io/search.html?q=" + encodeURI(text.value));
         }
         function load() {
-        var text = document.getElementById("SearchText");
-            text.value = window.location.search.split("?q=")[1];
+            var searchText = window.location.search.split("?q=")[1];
+            document.getElementById("SearchText").value = searchText;
+            document.getElementById("resultsFor").innerHTML += searchText;
+        }
+        function addResult(name, address) {
+            document.getElementById("resultList").innerHTML += ("<li><a href=\"" + address + "\">" + name + "</a></li>");
         }
     </script>
   </head>
@@ -35,14 +39,14 @@
     </svg></a>
         <span class="search-bar">
             <input id="SearchText" type="text" />
-            <button onclick="search();">Search</button>
+            <button onclick="search();">œŒ»— </button>
         </span>
-        <a style="margin-left: 16px; font-size: 36px;"><b>CatYoutuber</b> </a>
-        <p><marquee scrollamount="12"><a style="font-size:22px;">SEARCH REZULTS</a></marquee></p>
+        <a style="margin-left: 16px; font-size: 36px;" href="https://catyoutuber.github.io"><b>CatYoutuber</b> </a>
+        <p><marquee scrollamount="12"><a style="font-size:22px;">–≈«”À‹“¿“€ œŒ»— ¿</a></marquee></p>
       </div>
       <div class="content">
-          <ul>
-              <li><a href="catyoutuber.github.io">sas</a></li>
+          <h2 id="resultsFor">–ÂÁÛÎ¸Ú‡Ú˚ ÔÓ Á‡ÔÓÒÛ: </h2>
+          <ul id="resultList">
           </ul>
       </div>
   </body>
