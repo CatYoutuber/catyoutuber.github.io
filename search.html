@@ -6,12 +6,16 @@
     <link rel="stylesheet" href="style.css" />
     <script>
         function search() {
-            var text = document.getElementById("SearchText");
+        var text = document.getElementById("SearchText");
             window.location = ("catyoutuber.github.io/search.html?q=" + encodeURI(text.value));
+        }
+        function load() {
+        var text = document.getElementById("SearchText");
+            text.value = window.location.search.split("?q=")[1];
         }
     </script>
   </head>
-  <body>
+  <body onload="load();">
       <div class="header">
         <a href="https://www.youtube.com/channel/UCNjJnWpMz_YeKUM_806R7hw"><img src="https://yt3.ggpht.com/ytc/AAUvwniu-ocQgVV9cafxS60VS83CBVUhVDHnR9-FcHGS=s88-c-k-c0x00ffffff-no-rj" class="avatar"/></a>
 	    <a href="https://github.com/CatYoutuber" class="header-element"> <svg width="48" height="48" viewBox="0 0 16 16" version="1.1" aria-hidden="true">
@@ -34,14 +38,12 @@
             <button onclick="search();">Search</button>
         </span>
         <a style="margin-left: 16px; font-size: 36px;"><b>CatYoutuber</b> </a>
-        <p><marquee scrollamount="12"><a style="font-size:22px;">MAIN PAGE</a></marquee></p>
+        <p><marquee scrollamount="12"><a style="font-size:22px;">SEARCH REZULTS</a></marquee></p>
       </div>
       <div class="content">
-          <img src="https://i.ytimg.com/vi/awxWTWYh-Lg/sddefault.jpg"/>
-          <img src="https://i.imgur.com/rsyHgYB.jpg"/>
-          <img src="https://static.wikia.nocookie.net/6ea85efe-5404-4524-8afe-bc1e96eea8cd"/>
-          <img src="https://i.imgflip.com/4109g8.jpg"/>
-          <img src="https://cdn141.picsart.com/307037624213201.png?type=webp&to=min&r=640"/>
+          <ul>
+              <li><a href="catyoutuber.github.io">sas</a></li>
+          </ul>
       </div>
   </body>
 </html>
