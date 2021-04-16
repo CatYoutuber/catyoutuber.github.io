@@ -1,5 +1,5 @@
 ﻿body {
-    background-image: url("background.png");
+    background-image: url("images/background.png");
     background-repeat: repeat;
 }
 .avatar{
@@ -32,4 +32,9 @@
     margin-right:48px;
     margin-bottom: 86px;
     margin-top:100px;
+}
+.search-bar{
+    float: right;
+    margin-top: 16px;
+    margin-right: 16px;
 }
