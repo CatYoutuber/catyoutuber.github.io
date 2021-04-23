@@ -8,6 +8,9 @@ Block.prototype.draw = function (style) {
     ctx.fillStyle = style;
     ctx.fillRect(this.Column * BLOCKSIZE, this.Row * BLOCKSIZE, BLOCKSIZE, BLOCKSIZE);
 };
+Block.prototype.Equals = function (other) {
+    return this.Row == other.Row && this.Column == other.Column;
+};
 
 var gameOver = function () {
     clearTimeout(timeoutID);
@@ -35,6 +38,9 @@ var snakeBlocks = [
     new Block(2, 3),
     new Block(2, 4),
 ]
+var Boxes = [
+
+];
 var food = new Block(4,4);
 var direction = Directions.Right;
 
@@ -70,21 +76,24 @@ var update = function () {
     }
     if (head.Row == food.Row && head.Column == food.Column) {
         score++;
-        food = new Block(
-            Math.floor(Math.random() * (height / BLOCKSIZE) - 2) + 2,
-            Math.floor(Math.random() * (width / BLOCKSIZE) - 2) + 2);
+        food = GetRandomBlock();
     }
     else
         snakeBlocks.shift();
     for (var i = 0; i < snakeBlocks.length; i++)
         snakeBlocks[i].draw((i == snakeBlocks.length - 1) ? "blue" : "lime");
     food.draw("red")
-
+    for (var i = 0; i < Boxes.length; i++) {
+        Boxes[i].draw("yellow");
+        if (head.Equals(Boxes[i]))
+            gameOver();
+    }
     var head = snakeBlocks[snakeBlocks.length - 1];
     for (var i = 0; i < snakeBlocks.length - 1; i++) {
         if (head.Row == snakeBlocks[i].Row && head.Column == snakeBlocks[i].Column)
             gameOver();
     }
+
     if (head.Row < 1 || head.Row > (height / BLOCKSIZE) - 2 ||
         head.Column < 1 || head.Column > (width / BLOCKSIZE) - 2)
         gameOver();
@@ -94,6 +103,8 @@ function load() {
     ctx = canvas.getContext("2d");
     width = canvas.width;
     height = canvas.height;
+    for (var i = 0; i < 5; i++)
+        Boxes.push(GetRandomBlock())
     window.onkeypress = keyPress;
     timeoutID = setInterval(update, 500);
 }
@@ -117,4 +128,10 @@ function keyPress(keyEvent) {
                 direction = Directions.Left;
             break;
     }
+}
+
+function GetRandomBlock() {
+    return new Block(
+        Math.floor(Math.random() * (height / BLOCKSIZE) - 4) + 2,
+        Math.floor(Math.random() * (width / BLOCKSIZE) - 4) + 2);
 }
