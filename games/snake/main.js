@@ -100,6 +100,8 @@ var update = function () {
 }
 function load() {
     var canvas = document.getElementById("cvs");
+    canvas.width = window.innerWidth - BLOCKSIZE;
+    canvas.height = window.innerHeight - BLOCKSIZE;
     ctx = canvas.getContext("2d");
     width = canvas.width;
     height = canvas.height;
