@@ -10,3 +10,10 @@ body {
 canvas {
     display: block;
 }
+
+.fullscreen {
+    position: absolute;
+    z-index: 2;
+	left: 0;
+	top: 0;
+}

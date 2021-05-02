@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\demos",
+    "\\demos\\MatrixRain"
   ],
-  "SelectedNode": "\\index.html",
+  "SelectedNode": "\\demos\\MatrixRain\\main.js",
   "PreviewInSolutionExplorer": false
 }

@@ -2,13 +2,13 @@ var canvas, ctx;
 var columns, font_size = 15;
 var drops = [];
 function setup() {
-    canvas = document.getElementById("c");
+    canvas = document.getElementById("cvs");
     ctx = canvas.getContext("2d");
     canvas.height = window.innerHeight;
     canvas.width = window.innerWidth;
 
     ctx.font = font_size + "px arial";
-    columns = c.width / font_size;
+    columns = canvas.width / font_size;
     for (var x = 0; x < columns; x++)
         drops[x] = 1;
     setInterval(draw, 35);
@@ -24,4 +24,17 @@ function draw() {
             drops[i] = 0;
         drops[i]++;
     }
+}
+
+function openFullscreen() {
+  if (canvas.requestFullscreen) {
+    canvas.requestFullscreen();
+  } else if (canvas.webkitRequestFullscreen) { //Safari
+    canvas.webkitRequestFullscreen();
+  } else if (canvas.msRequestFullscreen) { //IExplorer
+    canvas.msRequestFullscreen();
+  }
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+    columns = canvas.width / font_size;
 }
