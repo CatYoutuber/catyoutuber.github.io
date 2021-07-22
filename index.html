@@ -5,6 +5,14 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="icon" href="images/favicon.png"/>
     <link rel="stylesheet" href="style.css" />
+    <script>
+        function toTop() {
+            scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        };
+    </script>
       <!----><!---->
   </head>
   <body>
@@ -65,5 +73,9 @@
               </ul>
             </details>
       </div>
+      <footer class="ftr">
+          <a>© CatYoutuber 2018-2021</a>
+          <button style="position: absolute; right: 10px;" onclick="toTop();">UP!</button>
+      </footer>
   </body>
 </html>
