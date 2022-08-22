@@ -24,6 +24,9 @@
     height: 100px;
     background: #AAAAAA;
 }
+header.hdr{
+    padding: 8px;
+}
 .content{
     height: 100%;
     background: rgba(196,196,196,0.75);
