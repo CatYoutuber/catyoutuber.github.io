@@ -21,7 +21,7 @@
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 100px;
+    height: 128px;
     background: #AAAAAA;
 }
 header.hdr{
@@ -34,7 +34,7 @@ header.hdr{
     margin-left:48px;
     margin-right:48px;
     margin-bottom: 86px;
-    margin-top:100px;
+    margin-top:128px;
     border-bottom-left-radius:15px;
     border-bottom-right-radius:15px;
 	padding: 8px;
