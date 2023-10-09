@@ -2,7 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\blog",
-    "\\images"
+    "\\images",
+    "\\utils"
   ],
+  "SelectedNode": "\\utils\\win7chrome.reg",
   "PreviewInSolutionExplorer": false
 }
