@@ -57,7 +57,7 @@ var update = function () {
     ctx.fillStyle = "white";
     ctx.textAlign = "left";
     ctx.textBaseLine = "top";
-    ctx.fillText("Score: " + score, BLOCKSIZE - 4, BLOCKSIZE - 4);
+    ctx.fillText("Score: " + score/* + " Food R:" + food.Row + " C: " + food.Column*/, BLOCKSIZE - 4, BLOCKSIZE - 4);
 
     var head = snakeBlocks[snakeBlocks.length - 1];
     switch (direction) {
@@ -77,6 +77,9 @@ var update = function () {
     if (head.Row == food.Row && head.Column == food.Column) {
         score++;
         food = GetRandomBlock();
+        /*while (Boxes.indexOf(food) == -1) {
+            food = GetRandomBlock();
+		}*/
     }
     else
         snakeBlocks.shift();
@@ -133,7 +136,12 @@ function keyPress(keyEvent) {
 }
 
 function GetRandomBlock() {
+    /* old
     return new Block(
         Math.floor(Math.random() * (height / BLOCKSIZE) - 4) + 2,
         Math.floor(Math.random() * (width / BLOCKSIZE) - 4) + 2);
+    */
+    return new Block(
+        Math.min(Math.floor(height / BLOCKSIZE) - 2,Math.max(2,Math.floor(Math.random() * (height / BLOCKSIZE)))),
+        Math.min(Math.floor(width / BLOCKSIZE) - 2,Math.max(2,Math.floor(Math.random() * (width / BLOCKSIZE)))));
 }

@@ -3,8 +3,10 @@
     "",
     "\\blog",
     "\\images",
+    "\\projects",
+    "\\projects\\reelsviewer",
     "\\utils"
   ],
-  "SelectedNode": "\\utils\\win7chrome.reg",
+  "SelectedNode": "\\projects\\reelsviewer\\index.html",
   "PreviewInSolutionExplorer": false
 }
