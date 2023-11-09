@@ -108,7 +108,8 @@ function load() {
     ctx = canvas.getContext("2d");
     width = canvas.width;
     height = canvas.height;
-    for (var i = 0; i < 5; i++)
+    var boxesConut = Math.ceil(Math.sqrt((width / BLOCKSIZE) * (height / BLOCKSIZE)) / 2);
+    for (var i = 0; i < boxesConut; i++)
         Boxes.push(GetRandomBlock())
     window.onkeypress = keyPress;
     timeoutID = setInterval(update, 500);
