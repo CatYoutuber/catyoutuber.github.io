@@ -1,15 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\blog",
     "\\games",
     "\\games\\pong",
     "\\games\\snake",
     "\\images",
     "\\projects",
     "\\projects\\reelsviewer",
+    "\\projects\\xmaslights",
+    "\\projects\\xmaslights\\plugins",
     "\\utils"
   ],
-  "SelectedNode": "\\games\\snake",
+  "SelectedNode": "\\index.html",
   "PreviewInSolutionExplorer": false
 }
