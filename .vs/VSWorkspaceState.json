@@ -1,8 +1,8 @@
 {
   "ExpandedNodes": [
     "",
+    "\\blog",
     "\\games",
-    "\\games\\pong",
     "\\games\\snake",
     "\\images",
     "\\projects",
@@ -11,6 +11,6 @@
     "\\projects\\xmaslights\\plugins",
     "\\utils"
   ],
-  "SelectedNode": "\\projects\\xmaslights\\index.html",
+  "SelectedNode": "\\blog\\index.html",
   "PreviewInSolutionExplorer": false
 }
